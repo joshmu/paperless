@@ -1,1 +1,40 @@
 // CUSTOM
+
+
+////////// LOGO
+#logo {
+
+  h2:hover {
+    color: #19c9ab;
+  }
+}
+
+
+//////////// MENU
+#menu {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background:transparent;
+
+  .collapse {
+    position: relative;
+    top: 40px;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      background-color: #16a085;
+    }
+  }
+}
+
+
+.navbar-default  {
+  border: none;
+}
+
+
+//////////
