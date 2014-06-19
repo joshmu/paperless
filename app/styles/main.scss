@@ -1,7 +1,15 @@
+////////// FONT-AWESOME
+// create font directory in app and copy over fonts then:
+$fa-font-path: "../fonts";
+@import "font-awesome/scss/font-awesome";
+
+//TODO: these fonts are not necessary
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
 // bower:scss
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
+
 
 //TEMPLATE
 @import "blacktie";
