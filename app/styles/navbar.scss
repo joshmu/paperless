@@ -8,6 +8,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+
 }
 
 
@@ -17,6 +18,8 @@
   h2 {
     display: inline-block;
     color: #fff;
+
+    transition: 0.2s color linear;
 
     &:hover {
       color: $hover-sp;
@@ -37,8 +40,11 @@
   a {
     color: #fff;
 
+    transition: 0.2s background-color linear;
+
     &:hover {
       background-color: $font-sp;
+
     }
   }
 
@@ -60,12 +66,15 @@
     border-radius: 0;
   }
 
-  &:hover, &:focus {
-    background: transparent !important;
+  &:hover {
 
     .icon-bar {
       background-color: $font-sp;
     }
+  }
+
+  &:focus {
+    background: transparent !important;
   }
 
 }
