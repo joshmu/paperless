@@ -1,13 +1,14 @@
 @import 'vars';
 
 #navbar {
-  background-color: rgba(47,47,47,0.8);
+  opacity:0;
+  display: none;
+  background-color: rgba(47,47,47,0.9);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-
 
 
 ////////// LOGO

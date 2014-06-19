@@ -8,7 +8,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
@@ -29,7 +29,7 @@
 <!-- Add your site or application content here -->
 
 <!-- NAV -->
-<div id="navbar">
+<div id="navbar" nav-show="" duration="400">
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-xs-10 col-sm-6">
@@ -78,7 +78,7 @@
 
 
 <!-- BANNER -->
-<div class="banner">
+<div id="banner">
 	<div class="banner-body">
 		<div class="container">
 			<div class="row">
@@ -180,6 +180,8 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+
+<script type="text/javascript" src="bower_components/appear/jquery.appear.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -188,6 +190,7 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/services/sitecontent.js"></script>
+<script src="scripts/directives/navshow.js"></script>
 <!-- endbuild -->
 </body>
 </html>
