@@ -67,6 +67,7 @@
   }
 
   &:hover {
+    background-color: transparent !important;
 
     .icon-bar {
       background-color: $font-sp;
