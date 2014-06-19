@@ -1,40 +1,36 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+//TEMPLATE
+@import "blacktie";
+
 // CUSTOM
 
-
-////////// LOGO
-#logo {
-
-  h2:hover {
-    color: #19c9ab;
-  }
-}
+////////// VARS
+@import "vars";
 
 
-//////////// MENU
-#menu {
-  margin-top: 10px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  background:transparent;
+/////////// MEDIA QUERY
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { }
 
-  .collapse {
-    position: relative;
-    top: 40px;
-  }
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {  }
 
-  a {
-    color: #fff;
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {  }
 
-    &:hover {
-      background-color: #16a085;
-    }
-  }
-}
+////////// BANNER
+@import "banner";
+
+////////// NAVBAR
+@import "navbar";
 
 
-.navbar-default  {
-  border: none;
-}
+
+
 
 
 //////////

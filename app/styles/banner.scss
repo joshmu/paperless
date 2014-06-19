@@ -1,0 +1,68 @@
+@import 'vars';
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.banner {
+  background: #000 url(../images/blacktie-imgs/about-bg.jpg) no-repeat scroll bottom center;
+  display: table;
+  height: 100%;
+  width:100%;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+
+  h1 {
+    color: #fff;
+  }
+
+  .page-scroll {
+    a {
+      border: 1px solid white;
+      border-radius: 100%;
+      color: white;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.2);
+      }
+    }
+
+  }
+
+}
+
+.banner-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.brand-heading {
+  font-size: 40px;
+}
+
+.intro-text {
+  font-size: 18px;
+}
+
+@media(min-width:767px) {
+  .banner {
+    height: 100%;
+    padding: 0;
+  }
+
+  .brand-heading {
+    font-size: 100px;
+  }
+
+  .intro-text {
+    font-size: 25px;
+  }
+}
