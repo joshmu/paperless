@@ -25,10 +25,12 @@ body {
   }
 
   .page-scroll {
-    a {
+    button {
       border: 1px solid white;
       border-radius: 100%;
       color: white;
+      background-color: transparent;
+      outline: none;
 
       transition: 0.3s background-color linear;
 

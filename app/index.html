@@ -16,7 +16,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<!-- build:css(./) styles/vendor.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
@@ -96,9 +96,9 @@
 					                      do.</p>
 
 					<div class="page-scroll">
-						<a href="#about" class="btn btn-circle">
+						<button class="btn btn-circle" smoother-scroll speed="1500" offset="70" target="welcome">
 							<i class="fa fa-angle-double-down"></i>
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -109,13 +109,14 @@
 
 
 <!-- VIEWS -->
-<main-view></main-view>
+<div ui-view></div>
+<!--<main-view></main-view>-->
 <!--<div ng-view=""></div>-->
 
 <div class="container">
 	<!-- FOOTER -->
-	<div class="footer">
-		<p><span class="fa fa-heart"></span> from the Yeoman team</p>
+	<div class="footer pull-right">
+		<p><span class="fa fa-heart-o"></span> MU</p>
 	</div>
 </div>
 
@@ -166,6 +167,7 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbower -->
 <script type="text/javascript" src="bower_components/appear/jquery.appear.js"></script>
 <!-- endbuild -->
@@ -179,6 +181,7 @@
 <script src="scripts/directives/parallax.js"></script>
 <script src="scripts/directives/autoscroll.js"></script>
 <script src="scripts/directives/mainview.js"></script>
+<script src="scripts/directives/smootherscroll.js"></script>
 <!-- endbuild -->
 </body>
 </html>
