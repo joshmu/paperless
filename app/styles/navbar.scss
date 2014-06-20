@@ -1,16 +1,15 @@
 @import 'vars';
 
 #navbar {
-  opacity:0;
+  opacity: 0;
   display: none;
-  background-color: rgba(47,47,47,0.9);
+  background-color: rgba(47, 47, 47, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 
 }
-
 
 ////////// LOGO
 #logo {
@@ -21,6 +20,10 @@
 
     transition: 0.2s color linear;
 
+    a {
+      color : #fff;
+    }
+
     &:hover {
       color: $hover-sp;
       cursor: pointer;
@@ -28,29 +31,34 @@
   }
 }
 
-
 //////////// MENU
 #menu {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 0;
-  background:transparent;
-  text-align:right;
+  background: transparent;
+  text-align: right;
 
-  a {
-    color: #fff;
-
+  li {
     transition: 0.2s background-color linear;
 
-    &:hover {
-      background-color: $font-sp;
+    .active {
+      background: none;
+      color: $font-sp;
+    }
+    a {
+      color: #fff;
 
+      &:hover {
+        background-color: $hover-sp;
+
+      }
     }
   }
 
 }
 
-.navbar-default  {
+.navbar-default {
   border: none !important;
 }
 

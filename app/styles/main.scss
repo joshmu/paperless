@@ -1,7 +1,3 @@
-////////// FONT-AWESOME
-// create font directory in app and copy over fonts then:
-$fa-font-path: "../fonts";
-@import "font-awesome/scss/font-awesome";
 
 //TODO: these fonts are not necessary
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
@@ -10,6 +6,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+////////// FONT-AWESOME
+// create font directory in app and copy over fonts then:
+$fa-font-path: "../fonts";
+@import "font-awesome/scss/font-awesome";
 
 //TEMPLATE
 @import "blacktie";
@@ -36,7 +36,26 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 ////////// NAVBAR
 @import "navbar";
 
+////////// NEWS
+#news {
+  background: #000 url(../images/oldContent/convention.jpg) no-repeat scroll bottom center;
+  background-size: cover;
+  height: 300px;
+  text-align: center;
+  padding: 35px 0;
+  color: #fff;
 
+
+  .overlay {
+    background-color: rgba(102,203,183,1);
+    opacity: 0.4;
+
+    //match
+    height: 300px;
+    position:relative;
+    bottom: 35px;
+  }
+}
 
 
 

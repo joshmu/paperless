@@ -16,7 +16,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<!-- build:css(./) styles/vendor.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
@@ -36,13 +36,13 @@
 <!-- Add your site or application content here -->
 
 <!-- NAV -->
-<div id="navbar" nav-show="" duration="300">
+<div id="navbar" nav-show duration="300">
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-xs-10 col-sm-6">
 				<h2>
 					<i class="fa fa-recycle fa-lg"></i>
-					Paperless Events
+					<a href="#banner">Paperless Events</a>
 				</h2>
 			</div>
 			<div class="nav col-xs-2 col-sm-6">
@@ -62,13 +62,13 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a>
+							<li><a href="#welcome">Welcome</a>
 							</li>
-							<li><a href="about.html">About</a>
+							<li><a href="#lg">About</a>
 							</li>
-							<li><a href="blog.html">Blog</a>
+							<li><a href="#call">Action</a>
 							</li>
-							<li><a href="contact.html">Contact</a>
+							<li><a href="#cf">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -85,14 +85,15 @@
 
 
 <!-- BANNER -->
-<div id="banner">
+<div id="banner" parallax="1">
 	<div class="banner-body">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-10 col-md-offset-1">
 					<h1 class="brand-heading">Paperless Events</h1>
 
-					<p class="intro-text">Sustainability, environmental awareness and responsibility drive what we do but, if we deliver a service to our clients, this green thinking is only part and parcel of the process.</p>
+					<p class="intro-text">Sustainability, environmental awareness and responsibility drive what we
+					                      do.</p>
 
 					<div class="page-scroll">
 						<a href="#about" class="btn btn-circle">
@@ -107,37 +108,15 @@
 
 
 
-<!--<!-- Menu -->
-<!--<nav class="menu" id="theMenu">-->
-<!--<div class="menu-wrap">-->
-<!--<h1 class="logo"><a href="index.html#home">LINK</a></h1>-->
-<!--<i class="fa fa-arrow-right menu-close"></i>-->
-<!--<a href="index.html">Home</a>-->
-<!--<a href="services.html">Services</a>-->
-<!--<a href="portfolio.html">Portfolio</a>-->
-<!--<a href="about.html">About</a>-->
-<!--<a href="#contact">Contact</a>-->
-<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
-<!--<a href="#"><i class="fa fa-twitter"></i></a>-->
-<!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
-<!--<a href="#"><i class="fa fa-envelope"></i></a>-->
-<!--</div>-->
-
-<!--<!-- Menu button -->
-<!--<div id="menuToggle"><i class="fa fa-bars"></i></div>-->
-<!--</nav>-->
-
+<!-- VIEWS -->
+<main-view></main-view>
+<!--<div ng-view=""></div>-->
 
 <div class="container">
-
-	<!-- VIEWS -->
-	<div ng-view=""></div>
-
 	<!-- FOOTER -->
 	<div class="footer">
-		<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+		<p><span class="fa fa-heart"></span> from the Yeoman team</p>
 	</div>
-
 </div>
 
 
@@ -197,6 +176,9 @@
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/services/sitecontent.js"></script>
 <script src="scripts/directives/navshow.js"></script>
+<script src="scripts/directives/parallax.js"></script>
+<script src="scripts/directives/autoscroll.js"></script>
+<script src="scripts/directives/mainview.js"></script>
 <!-- endbuild -->
 </body>
 </html>
