@@ -36,12 +36,18 @@ angular.module('paperlessApp')
 //				console.log('offset will be:', offset);
 //	    		console.log('max offset is:', maxOffset);
 
+				//TODO: CREATE BACK TO TOP BUTTON!
+
+				//REMOVE OFFSET VAR, WORK OUT MINIMUM WITH PARA AT 1 (NO PARA), ON SCREEN RESIZE, IF NOT WORKING STILL THIS IS THE POINT TO DISABLE
+				//FOR NOW USER CAN CHANGE THE IMAGE
+				//THEN LOOK AT REINTEGRATING OFFSET IN
+
 				//TODO: listen for screen resize and recalc offset
 				//TODO: NEED TO REMOVE OFFSET OPTION AND CREATE FUNC TO CALC MIN PARALLAX AND MAX
 
 				//TODO: hack to prevent parallax on smaller screens unless very tall images... needs work!
-				//prevent small
-				if($window.width() < 767) {
+				//prevent on smaller screens, only works on initial load
+				if($window.width() < 992) {
 					parallax = 0;
 					offset = 0;
 				}

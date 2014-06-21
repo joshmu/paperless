@@ -6,6 +6,8 @@
  * @description
  * # navShow
  */
+
+// TODO: modularize so i can use it for any elem
 angular.module('paperlessApp')
 	.directive('navShow', function($timeout) {
 		return {
@@ -20,6 +22,7 @@ angular.module('paperlessApp')
 					//hide nav
 					if(appear !== true) {
 						hide();
+						hide2(); //TODO: HACK
 					}
 					appear = true;
 
@@ -27,6 +30,7 @@ angular.module('paperlessApp')
 					//show nav
 					if(appear !== false) {
 						show();
+						show2(); //TODO: HACK
 					}
 					appear = false;
 
@@ -35,6 +39,7 @@ angular.module('paperlessApp')
 				//initial decision: when page loads decide to show/hide
 				$timeout(function() {
 					$('#banner').is(':appeared') ? hide() : show();
+					$('#banner').is(':appeared') ? hide2() : show2();
 				}, 300);
 
 				function show() {
@@ -50,6 +55,21 @@ angular.module('paperlessApp')
 						$(this).hide();
 					});
 				}
+
+				function show2() {
+					$('.back-top').show().stop().animate({
+						"opacity": 1
+					}, duration);
+				}
+
+				function hide2() {
+					$('.back-top').stop().animate({
+						"opacity": 0
+					}, duration, function() {
+						$(this).hide();
+					});
+				}
+
 			}
 		};
 	});

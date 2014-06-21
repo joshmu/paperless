@@ -14,20 +14,27 @@
 ////////// LOGO
 #logo {
 
-  h2 {
-    display: inline-block;
-    color: #fff;
+  color: #fff;
 
-    transition: 0.2s color linear;
+  #heading {
+    display: inline-block;
+    line-height: 65px;
+    font-size: 2em;
+
+    transition: 0.3s color linear;
 
     a {
-      color : #fff;
+      color: #fff;
     }
 
-    &:hover {
-      color: $hover-sp;
-      cursor: pointer;
-    }
+//    &:hover{
+//
+//      a {
+//        color: $hover-sp;
+//      }
+//      color: $hover-sp;
+//      cursor: pointer;
+//    }
   }
 }
 
@@ -40,7 +47,6 @@
   text-align: right;
 
   li {
-    transition: 0.2s background-color linear;
 
     .active {
       background: none;
@@ -48,6 +54,8 @@
     }
     a {
       color: #fff;
+
+      transition: 0.1s background-color linear;
 
       &:hover {
         background-color: $hover-sp;
@@ -97,3 +105,27 @@
   }
 }
 
+////////// BACK TO TOP
+.back-top {
+  opacity: 0;
+  display: none;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(47, 47, 47, 0.9);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  transition: 0.3s background-color linear;
+
+  i {
+    line-height: 45px;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: $hover-sp;
+    cursor: pointer;
+  }
+}
