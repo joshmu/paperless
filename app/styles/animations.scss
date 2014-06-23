@@ -1,14 +1,37 @@
-.animate-show {
-  -webkit-transition: all linear 0.3s;
-  transition: all linear 0.3s;
-  opacity: 1;
+////////// BANNER HEADING
+
+
+
+////////// NAVIGATION BAR
+//.animate-after-banner {
+//  opacity: 0;
+//  display: none;
+//}
+
+.animate-show-down {
+  animation: fadeInDown 1s;
 }
 
-.animate-show.ng-hide-add,
-.animate-show.ng-hide-remove {
+.animate-show-down.ng-hide-add,
+.animate-show-down.ng-hide-remove {
   display: block !important;
 }
 
-.animate-show.ng-hide {
-  opacity: 0;
+.animate-show-down.ng-hide {
+  animation: fadeOutUp 1s;
+}
+
+
+/////////// BACK TOP BUTTON
+.animate-show-up {
+  animation: fadeInUp 1s;
+}
+
+.animate-show-up.ng-hide-add,
+.animate-show-up.ng-hide-remove {
+  display: block !important;
+}
+
+.animate-show-up.ng-hide {
+  animation: fadeOutDown 1s;
 }

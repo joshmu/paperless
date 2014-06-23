@@ -17,6 +17,7 @@
 	<!-- build:css(./) styles/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
@@ -61,7 +62,7 @@
 
 
 <!-- NAV -->
-<div id="navbar" ng-hide="bannerView" class="animate-show">
+<div id="navbar" ng-hide="bannerView" class="animate-show-down">
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-xs-10 col-sm-6">
@@ -124,7 +125,7 @@
 	</div>
 </div>
 <!-- BACK TO TOP -->
-<div class="back-top animate-show" smoother-scroll speed="1500" target="banner" ng-show="footerView">
+<div class="back-top animate-show-up" smoother-scroll speed="1500" target="banner" ng-show="footerView">
 	<i class="fa fa-2x fa-angle-up"></i>
 </div>
 
