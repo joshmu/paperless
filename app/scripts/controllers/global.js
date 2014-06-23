@@ -12,6 +12,34 @@ angular.module('paperlessApp')
 		var self = this;
 
 
+		/*#############################################################
+		BRANDS TABS
+		#############################################################*/
+		self.brands = {
+			digitalposters: true,
+			eventranet : false,
+			speakerprep : false
+
+		};
+
+		self.updateBrand = function(brand){
+			console.log('updating brand content');
+			if(self.brands[brand]) {
+				console.log('brand content is already in view');
+				return;
+			}
+			//set prev tab to false
+			angular.forEach(self.brands, function(val, key){
+				if(self.brands[key]) {
+					console.log('removing ' + key);
+					self.brands[key] = false;
+				}
+			});
+			//set new tab
+			console.log('setting ' + brand);
+			self.brands[brand] = true;
+		};
+
 
 
 		/*#############################################################

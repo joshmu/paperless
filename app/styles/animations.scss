@@ -56,3 +56,40 @@
   animation: fadeOutDown;
   animation-duration: 0.3s;
 }
+
+
+/////////// BRANDS
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.ui-view-container{
+  min-height: 900px;
+}
+
+.brands {
+  position: relative;
+}
+
+.animate-ui-view.ng-enter, .animate-ui-view.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.animate-ui-view.ng-enter {
+  animation: slideInLeft;
+  animation-duration: 1s;
+  z-index: 8888;
+}
+
+.animate-ui-view.ng-enter-active {
+}
+
+.animate-ui-view.ng-leave {
+  animation: slideOutRight;
+  animation-duration: 1s;
+  z-index: 9999;
+}
+
+.animate-ui-view.ng-leave-active {
+}

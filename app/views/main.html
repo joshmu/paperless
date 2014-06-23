@@ -22,48 +22,22 @@
 		</div>
 	</div>
 
-	<ul>
-		<li><a ui-sref="main.digitalposters">DigitalPosters</a></li>
-		<li><a ui-sref="main.eventranet">Eventranet</a></li>
-		<li><a ui-sref="main.speakersprep">SpeakersPrep</a></li>
-	</ul>
-	<div ui-view></div>
-	<!-- CLIENT INFORMATION -->
-	<div id="lg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-lg-offset-1 desc">
-					<h3>Client Desctription</h3>
-
-					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-					   classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-					<p>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
-					   more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
-					   the word in classical literature, discovered the undoubtable source.</p>
-				</div>
-
-				<div class="col-lg-4 col-lg-offset-1 desc">
-					<h3>Agency Resume</h3>
-					<br>
-					<h5><b>Team Leader:</b> REBECCA ZEARING</h5>
-					<h5><b>Agency Job:</b> WEB DESIGN, WEB DEVELOPMENT</h5>
-					<h5><b>Proposal Description:</b></h5>
-
-					<p class="tm">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up
-					              one of the more obscure.<br/>Lorem Ipsum passage, and going through the cites of the
-					              word in classical literature.</p>
-
-					<p><a href="http://BlackTie.co"><i class="fa fa-link"></i> Visit Site</a></p>
-
-				</div>
-
-			</div>
-			<!-- row -->
+	<!-- BRANDS -->
+	<section id="brands"></section>
+	<div class="brands">
+		<ul class="nav navbar-inverse nav-pills nav-justified">
+			<li ng-class="{active : g.brands.digitalposters}"><a ui-sref="main.digitalposters"
+			       ng-click="g.updateBrand('digitalposters')">DigitalPosters</a></li>
+			<li ng-class="{active : g.brands.eventranet}"><a ui-sref="main.eventranet"
+			       ng-click="g.updateBrand('eventranet')">Eventranet</a></li>
+			<li ng-class="{active : g.brands.speakersprep}"><a ui-sref="main.speakersprep"
+			       ng-click="g.updateBrand('speakersprep')">SpeakersPrep</a></li>
+		</ul>
+		<!-- STATES -->
+		<div class="ui-view-container">
+			<div class="animate-ui-view" ui-view></div>
 		</div>
-		<!-- container -->
 	</div>
-	<!-- dg -->
 
 
 	<!--&lt;!&ndash; SINGLE PROJECT STANDOUT IMAGE &ndash;&gt;-->
@@ -89,10 +63,15 @@
 		<div class="container">
 			<div class="row">
 				<h3>PaperlessEvents was pleased to be involved in Australia’s largest education technology event.</h3>
+
 				<h3>The EduTECH 2013 National Congress & Exhibition.</h3>
 
 				<div class="col-lg-8 col-lg-offset-2">
-					<p>During the first day of the congress, we set up a video link between the Brisbane Convention and Exhibition Centre and Sal Khan, the founder of the Khan Academy (khanacademy.org), a non-profit, revolutionising education by providing free, world-class education to "anyone, anywhere" in the world.</p>
+					<p>During the first day of the congress, we set up a video link between the Brisbane Convention and
+					   Exhibition Centre and Sal Khan, the founder of the Khan Academy (khanacademy.org), a non-profit,
+					   revolutionising education by providing free, world-class education to "anyone, anywhere" in the
+					   world.</p>
+
 					<p>
 						<button type="button" class="btn btn-green btn-lg">Read More...</button>
 					</p>
@@ -108,26 +87,26 @@
 
 <!-- news -->
 <div id="news" parallax="2" parallax-offset="300">
-<div class="">
-	<div class="container">
-		<div class="row">
-			<!--<h3>We Understand Your Needs</h3>-->
+	<div class="">
+		<div class="container">
+			<div class="row">
+				<!--<h3>We Understand Your Needs</h3>-->
 
-			<!--<div class="col-lg-8 col-lg-offset-2">-->
-			<!--<p>During the first day of the congress, we set up a video link between the Brisbane Convention and-->
-			<!--Exhibition Centre and Sal Khan, the founder of the Khan Academy (khanacademy.org), a non-profit,-->
-			<!--revolutionising education by providing free, world-class education to "anyone, anywhere" in the-->
-			<!--world.</p>-->
+				<!--<div class="col-lg-8 col-lg-offset-2">-->
+				<!--<p>During the first day of the congress, we set up a video link between the Brisbane Convention and-->
+				<!--Exhibition Centre and Sal Khan, the founder of the Khan Academy (khanacademy.org), a non-profit,-->
+				<!--revolutionising education by providing free, world-class education to "anyone, anywhere" in the-->
+				<!--world.</p>-->
 
-			<!--<p>-->
-			<!--<button type="button" class="btn btn-green btn-lg">More</button>-->
-			<!--</p>-->
-			<!--</div>-->
+				<!--<p>-->
+				<!--<button type="button" class="btn btn-green btn-lg">More</button>-->
+				<!--</p>-->
+				<!--</div>-->
+			</div>
+			<!-- row -->
 		</div>
-		<!-- row -->
+		<!-- container -->
 	</div>
-	<!-- container -->
-</div>
 	<!-- overlay -->
 </div>
 <!-- news -->
@@ -181,14 +160,16 @@
 				<div class="col-lg-4 dg">
 					<h4 class="ml">FACEBOOK</h4>
 
-					<p class="centered"><a href="http://www.facebook.com/pages/Lucien-Mark"><i class="fa fa-facebook"></i></a></p>
+					<p class="centered"><a href="http://www.facebook.com/pages/Lucien-Mark"><i
+							class="fa fa-facebook"></i></a></p>
 
 					<p class="ml">> Become A Friend</p>
 				</div>
 				<div class="col-lg-4 lg">
 					<h4 class="ml">TWITTER</h4>
 
-					<p class="centered"><a href="http://twitter.com/paperlessevent"><i class="fa fa-twitter"></i></a></p>
+					<p class="centered"><a href="http://twitter.com/paperlessevent"><i class="fa fa-twitter"></i></a>
+					</p>
 
 					<p class="ml">> Follow Us</p>
 				</div>
@@ -200,11 +181,11 @@
 					<p class="ml">> ritchie.andrew</p>
 				</div>
 				<!--<div class="col-lg-4 dg">-->
-					<!--<h4 class="ml">GOOGLE +</h4>-->
+				<!--<h4 class="ml">GOOGLE +</h4>-->
 
-					<!--<p class="centered"><a href="#"><i class="fa fa-google-plus"></i></a></p>-->
+				<!--<p class="centered"><a href="#"><i class="fa fa-google-plus"></i></a></p>-->
 
-					<!--<p class="ml">> Add Us To Your Circle</p>-->
+				<!--<p class="ml">> Add Us To Your Circle</p>-->
 				<!--</div>-->
 			</div>
 			<!-- row -->
@@ -227,7 +208,7 @@
 				<!--col-lg-8-->
 				<div class="col-lg-4">
 					<h4>CONTACT</h4>
-						<!--<br/>Minsk - Head Office</h4>-->
+					<!--<br/>Minsk - Head Office</h4>-->
 					<br>
 
 					<p>PO Box 21258 <br/>

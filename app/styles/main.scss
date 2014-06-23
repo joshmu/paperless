@@ -1,4 +1,3 @@
-
 //TODO: these fonts are not necessary
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
@@ -19,23 +18,24 @@ $fa-font-path: "../fonts";
 ////////// VARS
 @import "vars";
 
-
 /////////// MEDIA QUERY
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-sm-min) { }
+@media (min-width: $screen-sm-min) {
+}
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: $screen-md-min) {  }
+@media (min-width: $screen-md-min) {
+}
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: $screen-lg-min) {  }
+@media (min-width: $screen-lg-min) {
+}
 
 ////////// BANNER
 @import "banner";
 
 ////////// NAVBAR
 @import "navbar";
-
 
 ////////// NEWS
 #news {
@@ -46,16 +46,54 @@ $fa-font-path: "../fonts";
   padding: 35px 0;
   color: #fff;
 
-
   .overlay {
-    background-color: rgba(102,203,183,1);
+    background-color: rgba(102, 203, 183, 1);
     opacity: 0.4;
 
     //match
     height: 300px;
-    position:relative;
+    position: relative;
     bottom: 35px;
   }
+}
+
+//////////// BRANDS
+.brands {
+
+  background-color: none;
+
+  ul {
+    background-color: rgba(47, 47, 47, 0.9);
+  }
+
+  //weird 2px margin...
+  .nav-pills > li + li {
+    margin: 0;
+  }
+
+  li {
+    cursor: pointer;
+    margin: 0;
+
+    a {
+      border-radius: 0px;
+      color: white;
+      font-size: 1.4em;
+      margin: 0;
+
+      transition: 0.2s ease-in background-color;
+
+      .active {
+        color: $font-sp;
+        background-color: red;
+      }
+
+      &:hover {
+        background-color: $hover-sp;
+      }
+    }
+  }
+
 }
 
 
@@ -68,13 +106,10 @@ a {
   }
 }
 
-
-
 ////////// MU
 #mu {
   cursor: pointer;
 }
-
 
 ////////// ANIMATIONS
 @import "animations";
