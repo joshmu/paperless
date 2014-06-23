@@ -1,12 +1,22 @@
 ////////// BANNER HEADING
-
+//brand-heading
+.animate-brand-heading {
+  animation: fadeInUp 1s;
+}
+//intro-text
+.animate-intro-text {
+  animation: fadeInUp 1s;
+}
+//page-scroll
+.animate-page-scroll {
+  animation: fadeInUp 1s;
+}
 
 
 ////////// NAVIGATION BAR
-//.animate-after-banner {
-//  opacity: 0;
-//  display: none;
-//}
+.nav-state {
+  display: none;
+}
 
 .animate-show-down {
   animation: fadeInDown 1s;

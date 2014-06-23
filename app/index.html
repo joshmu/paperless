@@ -26,7 +26,7 @@
 
 
 </head>
-<body ng-app="paperlessApp" ng-controller="GlobalCtrl">
+<body ng-app="paperlessApp" ng-controller="GlobalCtrl as g">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
                                                                                                                     your
@@ -38,7 +38,7 @@
 
 
 <!-- BANNER -->
-<div id="banner" parallax="1" in-view="bannerView = $inview" in-view-offset="-71">
+<div id="banner" parallax="1" in-view="g.bannerView = $inview" in-view-offset="-71">
 	<div class="banner-body">
 		<div class="container">
 			<div class="row">
@@ -62,7 +62,7 @@
 
 
 <!-- NAV -->
-<div id="navbar" ng-hide="bannerView" class="animate-show-down">
+<div id="navbar" ng-hide="g.bannerView" class="animate-show-down" ng-class="{'nav-state' : g.initialState}">
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-xs-10 col-sm-6">
@@ -112,11 +112,11 @@
 
 
 <!-- VIEWS -->
-<div ui-view></div>
+<div ui-view class="mainContent"></div>
 <!--<main-view></main-view>-->
 <!--<div ng-view=""></div>-->
 
-<div class="container" in-view="footerView = $inview">
+<div class="container" in-view="g.footerView = $inview">
 	<!-- FOOTER -->
 	<div id="mu" class="footer pull-right" ng-mouseenter="mu = true" ng-mouseleave="mu = false">
 		<p>
@@ -125,7 +125,7 @@
 	</div>
 </div>
 <!-- BACK TO TOP -->
-<div class="back-top animate-show-up" smoother-scroll speed="1500" target="banner" ng-show="footerView">
+<div class="back-top animate-show-up" smoother-scroll speed="1500" target="banner" ng-show="g.footerView">
 	<i class="fa fa-2x fa-angle-up"></i>
 </div>
 

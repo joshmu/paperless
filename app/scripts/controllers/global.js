@@ -8,6 +8,59 @@
  * Controller of the paperlessApp
  */
 angular.module('paperlessApp')
-  .controller('GlobalCtrl', function ($scope) {
-    $scope.bannerView = true;
-  });
+	.controller('GlobalCtrl', function($scope, $timeout) {
+		var self = this;
+
+
+
+
+		/*#############################################################
+		BANNER DETECTION
+		#############################################################*/
+
+		//auto-presume banner is going to be visible on load
+		self.bannerView = true;
+		self.initialState = true;
+
+		//watcher to check state and remove once state changes
+		var bannerListener = $scope.$watch(function(){
+			return self.bannerView;
+		}, function(n, o) {
+			if(n === false) {
+				console.log('banner not visible!');
+				self.initialState = false;
+				//remove watcher
+				bannerListener();
+			}
+		});
+
+		var midSectionListener = $scope.$watch(function(){
+			return self.midSectionView;
+		}, function(n, o){
+			console.log('mid section content detected');
+			self.initialState = false;
+			self.bannerView = false;
+			//remove initial state watchers
+			bannerListener();
+			midSectionListener();
+		});
+
+//		$('.mainContent').one('mouseover', contentScrolled);
+//
+//		function contentScrolled() {
+//			console.log('content visible!');
+//			$scope.initialState = false;
+//			bannerListener();
+//		}
+
+//		var contentListener = $scope.$watch('contentView', function(n, o){
+//			if(n) {
+//				console.log('content is visible!');
+//				$scope.initialState = false;
+//				//remove watcher
+//				bannerListener();
+//				contentListener();
+//			}
+//		})
+
+	});
