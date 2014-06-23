@@ -5,7 +5,7 @@
 	<title>Paperless Events</title>
 	<!-- TODO: PLACE (./) FOR BOTH CSS AND JS USEMIN BUILDS! -->
 	<!-- TODO: REMOVE BOOTSTRAP (BOTH CSS & JS) HELPER WHEN BUILDING, ALSO UPDATE BOWER.JSON!-->
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>-->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'
 	      type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
@@ -37,7 +37,7 @@
 
 
 <!-- BANNER -->
-<div id="banner" parallax="1">
+<div id="banner" parallax="1" in-view="bannerView = $inview" in-view-offset="-71">
 	<div class="banner-body">
 		<div class="container">
 			<div class="row">
@@ -61,7 +61,7 @@
 
 
 <!-- NAV -->
-<div id="navbar" nav-show duration="300">
+<div id="navbar" ng-hide="bannerView" class="animate-show">
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-xs-10 col-sm-6">
@@ -115,15 +115,16 @@
 <!--<main-view></main-view>-->
 <!--<div ng-view=""></div>-->
 
-<div class="container">
+<div class="container" in-view="footerView = $inview">
 	<!-- FOOTER -->
-	<div class="footer pull-right">
-		<p><span class="fa fa-heart-o"></span> MU</p>
+	<div id="mu" class="footer pull-right" ng-mouseenter="mu = true" ng-mouseleave="mu = false">
+		<p>
+			<a href="http://joshmu.com" target="_blank"><span class="fa fa-heart-o" ng-class="{'fa-spin' : mu}"></span> MU</a>
+		</p>
 	</div>
 </div>
-
 <!-- BACK TO TOP -->
-<div class="back-top" smoother-scroll speed="1500" target="banner">
+<div class="back-top animate-show" smoother-scroll speed="1500" target="banner" ng-show="footerView">
 	<i class="fa fa-2x fa-angle-up"></i>
 </div>
 
@@ -173,10 +174,9 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-inview/angular-inview.js"></script>
 <!-- endbower -->
-<script type="text/javascript" src="bower_components/appear/jquery.appear.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -189,6 +189,7 @@
 <script src="scripts/directives/autoscroll.js"></script>
 <script src="scripts/directives/mainview.js"></script>
 <script src="scripts/directives/smootherscroll.js"></script>
+<script src="scripts/directives/peekaboo.js"></script>
 <!-- endbuild -->
 </body>
 </html>

@@ -11,7 +11,9 @@ body {
 }
 
 #banner {
-  background: #000 url(../images/blacktie-imgs/about-bg.jpg) no-repeat scroll bottom center;
+//  background: #000 url(../images/blacktie-imgs/about-bg.jpg) no-repeat scroll bottom center;
+
+  background: #000 url(../images/filler/cute.jpg) no-repeat scroll bottom center;
   display: table;
   height: 100%;
   width: 100%;
@@ -32,7 +34,7 @@ body {
       background-color: transparent;
       outline: none;
 
-      transition: 0.3s background-color linear;
+      transition: 0.3s background-color ease-in;
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.2);
@@ -47,6 +49,8 @@ body {
 .banner-body {
   display: table-cell;
   vertical-align: middle;
+  position:relative;
+  bottom: 100px;
 }
 
 .brand-heading {

@@ -36,6 +36,7 @@ $fa-font-path: "../fonts";
 ////////// NAVBAR
 @import "navbar";
 
+
 ////////// NEWS
 #news {
   background: #000 url(../images/oldContent/convention.jpg) no-repeat scroll bottom center;
@@ -58,6 +59,22 @@ $fa-font-path: "../fonts";
 }
 
 
+////////// ANCHORS
+a {
+
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: 0;
+  }
+}
 
 
-//////////
+
+////////// MU
+#mu {
+  cursor: pointer;
+}
+
+
+////////// ANIMATIONS
+@import "animations";

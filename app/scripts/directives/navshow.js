@@ -16,13 +16,13 @@ angular.module('paperlessApp')
 				var duration = Number(attrs.duration) || 600;
 
 				var $nav = $(element);
+				var $backTop = $('.back-top');
 				var appear;       //used this flag to prevent multiple events being fired
 
 				$('#banner').on('appear', function() {
 					//hide nav
 					if(appear !== true) {
 						hide();
-						hide2(); //TODO: HACK
 					}
 					appear = true;
 
@@ -30,7 +30,6 @@ angular.module('paperlessApp')
 					//show nav
 					if(appear !== false) {
 						show();
-						show2(); //TODO: HACK
 					}
 					appear = false;
 
@@ -38,17 +37,27 @@ angular.module('paperlessApp')
 
 				//initial decision: when page loads decide to show/hide
 				$timeout(function() {
-					$('#banner').is(':appeared') ? hide() : show();
-					$('#banner').is(':appeared') ? hide2() : show2();
+					var x = $('#banner').is(':appeared');
+					x ? hide() : show();
 				}, 300);
 
 				function show() {
+					showNav();
+					showBackTop();
+				}
+
+				function hide() {
+					hideNav();
+					hideBackTop();
+				}
+
+				function showNav() {
 					$nav.show().stop().animate({
 						"opacity": 1
 					}, duration);
 				}
 
-				function hide() {
+				function hideNav() {
 					$nav.stop().animate({
 						"opacity": 0
 					}, duration, function() {
@@ -56,14 +65,14 @@ angular.module('paperlessApp')
 					});
 				}
 
-				function show2() {
-					$('.back-top').show().stop().animate({
+				function showBackTop() {
+					$backTop.show().stop().animate({
 						"opacity": 1
 					}, duration);
 				}
 
-				function hide2() {
-					$('.back-top').stop().animate({
+				function hideBackTop() {
+					$backTop.stop().animate({
 						"opacity": 0
 					}, duration, function() {
 						$(this).hide();
