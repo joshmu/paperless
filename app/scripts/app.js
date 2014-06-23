@@ -29,16 +29,18 @@ angular
 	// Now set up the states
 	$stateProvider
 		.state('main', {
-			url: "/",
 			templateUrl: "views/main.html"
 		})
-//		.state('state1.list', {
-//			url: "/list",
-//			templateUrl: "partials/state1.list.html",
-//			controller: function($scope) {
-//				$scope.items = ["A", "List", "Of", "Items"];
-//			}
-//		})
+			.state('main.digitalposters', {
+				url: "/",
+				templateUrl: "views/main.digitalposters.html"
+			})
+			.state('main.eventranet', {
+				templateUrl: "views/main.eventranet.html"
+			})
+			.state('main.speakersprep', {
+				templateUrl: "views/main.speakersprep.html"
+			})
 //		.state('state2', {
 //			url: "/state2",
 //			templateUrl: "partials/state2.html"
