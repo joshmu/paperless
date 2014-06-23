@@ -47,22 +47,4 @@ angular.module('paperlessApp')
 			}
 		});
 
-//		$('.mainContent').one('mouseover', contentScrolled);
-//
-//		function contentScrolled() {
-//			console.log('content visible!');
-//			$scope.initialState = false;
-//			bannerListener();
-//		}
-
-//		var contentListener = $scope.$watch('contentView', function(n, o){
-//			if(n) {
-//				console.log('content is visible!');
-//				$scope.initialState = false;
-//				//remove watcher
-//				bannerListener();
-//				contentListener();
-//			}
-//		})
-
 	});
