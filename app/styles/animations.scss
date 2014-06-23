@@ -1,15 +1,27 @@
 ////////// BANNER HEADING
 //brand-heading
 .animate-brand-heading {
-  animation: fadeInUp 1s;
+  opacity: 0;
+  animation: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 //intro-text
 .animate-intro-text {
-  animation: fadeInUp 1s;
+  opacity: 0;
+  animation: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 //page-scroll
 .animate-page-scroll {
-  animation: fadeInUp 1s;
+  opacity:0;
+  animation: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 
