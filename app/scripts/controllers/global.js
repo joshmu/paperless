@@ -37,12 +37,14 @@ angular.module('paperlessApp')
 		var midSectionListener = $scope.$watch(function(){
 			return self.midSectionView;
 		}, function(n, o){
-			console.log('mid section content detected');
-			self.initialState = false;
-			self.bannerView = false;
-			//remove initial state watchers
-			bannerListener();
-			midSectionListener();
+			if(n) {
+				console.log('mid section content detected');
+				self.initialState = false;
+				self.bannerView = false;
+				//remove initial state watchers
+				bannerListener();
+				midSectionListener();
+			}
 		});
 
 //		$('.mainContent').one('mouseover', contentScrolled);
