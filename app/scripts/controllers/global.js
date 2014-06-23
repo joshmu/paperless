@@ -9,6 +9,5 @@
  */
 angular.module('paperlessApp')
   .controller('GlobalCtrl', function ($scope) {
-
-		$scope.bannerView = true;
+    $scope.bannerView = true;
   });
