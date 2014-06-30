@@ -6,11 +6,13 @@
  * @description
  * # scrollTo
  */
+/* global $ */
+
 angular.module('paperlessApp')
 
 .directive('scrollTo', function(){
 	return {
-		restrict : "A",
+		restrict : 'A',
 		link: function(scope, elem, attrs){
 			//attrs: smoother-scroll=target, offset=offset, speed=duration
 
@@ -28,18 +30,18 @@ angular.module('paperlessApp')
 				if(config.target) {
 
 					offset = +attrs.offset || config.offset;
-					$target = $("#" + config.target);
+					$target = $('#' + config.target);
 
-					$("html,body").animate({
+					$('html,body').animate({
 						scrollTop: $target.offset().top - offset
 					}, duration);
 
 				} else {
-					$("html,body").animate({
+					$('html,body').animate({
 						scrollTop: 0
 					}, duration);
 				}
 			});
 		}
-	}
+	};
 });

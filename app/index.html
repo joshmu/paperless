@@ -38,7 +38,7 @@
 
 
 <!-- BANNER -->
-<div id="banner" parallax="1" in-view="g.bannerView = $inview" in-view-offset="-71">
+<div id="banner" parallax="4" in-view="g.bannerView = $inview" in-view-offset="-71">
 	<div class="banner-body">
 		<div class="container">
 			<div class="row">
@@ -62,7 +62,7 @@
 
 
 <!-- NAV -->
-<div id="navbar" ng-hide="g.bannerView" class="animate-show-down" ng-class="{'nav-state' : g.initialState}">
+<div id="navbar" ng-show="!g.bannerView" class="animate-show-down nav-state" ng-class="{'nav-state' : g.initialState}">
 	<div class="container">
 		<div class="row">
 			<div id="logo" class="col-xs-10 col-sm-6">
@@ -126,7 +126,7 @@
 	</div>
 </div>
 <!-- BACK TO TOP -->
-<div class="back-top animate-show-up" scroll-to="banner" speed="1500" ng-show="g.footerView">
+<div class="back-top animate-show-up nav-state" scroll-to speed="1500" ng-show="g.footerView" ng-class="{'nav-state' : g.initialState}">
 	<i class="fa fa-2x fa-angle-up"></i>
 </div>
 
@@ -155,6 +155,9 @@
 <![endif]-->
 
 <!-- build:js(./) scripts/vendor.js -->
+<!-- angular-google-maps -->
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.underscore.min.js'></script>
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
@@ -178,6 +181,8 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-inview/angular-inview.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

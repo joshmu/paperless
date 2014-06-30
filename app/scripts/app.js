@@ -17,39 +17,40 @@ angular
     'ngSanitize',
     'ngTouch',
 	'ui.router',
-	'angular-inview'
+	'angular-inview',
+	'google-maps'
   ])
 
 
 .config(function($stateProvider, $urlRouterProvider) {
 	//
 	// For any unmatched url, redirect to /state1
-	$urlRouterProvider.otherwise("/");
+	$urlRouterProvider.otherwise('/');
 	//
 	// Now set up the states
 	$stateProvider
 		.state('main', {
-			templateUrl: "views/main.html"
+			templateUrl: 'views/main.html'
 		})
 			.state('main.digitalposters', {
-				url: "/",
-				templateUrl: "views/main.digitalposters.html"
+				url: '/',
+				templateUrl: 'views/main.digitalposters.html'
 			})
 			.state('main.eventranet', {
-				templateUrl: "views/main.eventranet.html"
+				templateUrl: 'views/main.eventranet.html'
 			})
 			.state('main.speakersprep', {
-				templateUrl: "views/main.speakersprep.html"
-			})
+				templateUrl: 'views/main.speakersprep.html'
+			});
 //		.state('state2', {
-//			url: "/state2",
-//			templateUrl: "partials/state2.html"
+//			url: '/state2',
+//			templateUrl: 'partials/state2.html'
 //		})
 //		.state('state2.list', {
-//			url: "/list",
-//			templateUrl: "partials/state2.list.html",
+//			url: '/list',
+//			templateUrl: 'partials/state2.list.html',
 //			controller: function($scope) {
-//				$scope.things = ["A", "Set", "Of", "Things"];
+//				$scope.things = ['A', 'Set', 'Of', 'Things'];
 //			}
 //		})
 });

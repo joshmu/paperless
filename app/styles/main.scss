@@ -37,9 +37,15 @@ $fa-font-path: "../fonts";
 ////////// NAVBAR
 @import "navbar";
 
+////////// CONTACT
+@import "contact";
+
 ////////// NEWS
 #news {
   background: #000 url(../images/oldContent/convention.jpg) no-repeat scroll bottom center;
+  background-attachment: fixed;
+  //TODO: make background attachment width 1440px and center, then there will be no props with parallax!
+  //TODO: animation on intro load after banner, hover over each brand and then select the first!
   background-size: cover;
   height: 300px;
   text-align: center;

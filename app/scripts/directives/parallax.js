@@ -6,6 +6,8 @@
  * @description
  * # parallax
  */
+/* global $ */
+
 angular.module('paperlessApp')
 	.directive('parallax', function() {
 		return {
@@ -18,7 +20,7 @@ angular.module('paperlessApp')
 
 				var offset = +attrs.parallaxOffset || 0;
 
-				var diff = $window.scrollTop() - $elem.offset().top;
+//				var diff = $window.scrollTop() - $elem.offset().top;
 
 				var parallax = +attrs.parallax;
 
@@ -55,7 +57,7 @@ angular.module('paperlessApp')
 				$window.scroll(function() {
 					var heightPos = $window.scrollTop() - $elem.offset().top;
 
-					var yPos = (heightPos / parallax) - offset;
+					var yPos = -(heightPos / parallax) - offset;
 
 					// Put together our final background position
 					var coords = '50% ' + yPos + 'px';

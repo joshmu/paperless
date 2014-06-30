@@ -199,11 +199,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<div id="mapwrap">
-						<iframe height="400" width="100%" frameborder="0" scrolling="no" marginheight="0"
-						        marginwidth="0"
-						        src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-37.809637,144.963903&amp;spn=67.34552,156.972656&amp;z=6&amp;output=embed"></iframe>
-					</div>
+					<!--<div id="mapwrap">-->
+						<!--<iframe height="400" width="100%" frameborder="0" scrolling="no" marginheight="0"-->
+						        <!--marginwidth="0"-->
+						        <!--src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-37.809637,144.963903&amp;spn=67.34552,156.972656&amp;z=6&amp;output=embed"></iframe>-->
+					<!--</div>-->
+					<google-map center="g.map.center" zoom="g.map.zoom">
+						<marker ng-repeat='marker in g.map.markers' coords='marker.coords'
+						        icon='g.map.markerIcon'>
+						</marker>
+					</google-map>
 				</div>
 				<!--col-lg-8-->
 				<div class="col-lg-4">
