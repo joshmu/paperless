@@ -15,8 +15,24 @@
   @include introFade(1s, 1s);
 }
 //page-scroll
-.animate-page-scroll {
+@keyframes glow {
+  0% { opacity:1; }
+  50% { opacity:0.3; }
+  100% { opacity:1; }
+}
+
+.animate-page-scroll-A {
   @include introFade(1.5s, 1s);
+}
+
+.animate-page-scroll-B {
+//  @include introFade(1.5s, 1s);
+  opacity: 0;
+  animation: glow;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 
