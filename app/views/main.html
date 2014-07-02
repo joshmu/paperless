@@ -205,30 +205,14 @@
 						        <!--src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-37.809637,144.963903&amp;spn=67.34552,156.972656&amp;z=6&amp;output=embed"></iframe>-->
 					<!--</div>-->
 					<google-map center="g.map.center" zoom="g.map.zoom">
-						<marker ng-repeat='marker in g.map.markers' coords='marker.coords' click='g.contact(marker.name)'
+						<marker ng-repeat='marker in g.map.markers' coords='marker.coords' click='g.currentContact = marker.name'
 						        icon='g.map.markerIcon'>
 						</marker>
 					</google-map>
 				</div>
 				<!--col-lg-8-->
 				<div class="col-lg-4">
-					<h4>CONTACT</h4>
-					<!--<br/>Minsk - Head Office</h4>-->
-					<br>
-
-					<p>PO Box 21258 <br/>
-					   Little Lonsdale Street <br/>
-					   Melbourne VIC 8011
-					</p>
-
-					<p>
-						P: +61 7 3266 6468<br/>
-						<!--F: +55 4333-4345<br/>-->
-						E: <a href="mailto:info@lucien.com.au">info@lucien.com.au</a>
-					</p>
-
-					<p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-					   opposed to using 'Content here, content here', making it look like readable English.</p>
+					<contact-info></contact-info>
 				</div>
 				<!--col-lg-4-->
 			</div>

@@ -100,6 +100,9 @@ angular.module('paperlessApp')
 			console.log('hello ' + location);
 		};
 
+		//default contact
+		g.currentContact = 'melb';
+
 		//brisbane
 		var brisMarker = {
 			coords: {
