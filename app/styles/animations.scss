@@ -55,7 +55,7 @@
   animation-duration: 0.6s;
 }
 
-.back-top-animation.ng-hide {
+.back-top-animation.ng-hide-add {
   animation: fadeOutDown;
   animation-duration: 0.3s;
 }
@@ -100,4 +100,26 @@ to prevent collapsing during animation*/
 }
 
 .animate-ui-view.ng-leave-active {
+}
+
+
+/////////// CONTACT
+
+.contact-animation {
+
+}
+
+.contact-animation.ng-hide-remove{
+  animation: slideInLeft;
+  animation-duration: 0.7s;
+}
+
+.contact-animation.ng-hide-add{
+  animation: fadeOut;
+  animation-duration: 0.3s;
+}
+
+.contact-animation.ng-hide-remove,
+.contact-animation.ng-hide-add {
+  display: block !important;
 }

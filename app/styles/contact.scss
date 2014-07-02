@@ -1,3 +1,17 @@
+#cf {
+  overflow: hidden;
+}
+
 .angular-google-map-container {
   height: 400px;
+  z-index: 5;
+}
+
+.contact-info {
+  position:relative;
+}
+
+.contact-item {
+  z-index: 0;
+  position: absolute;
 }
