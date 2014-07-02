@@ -136,6 +136,21 @@
 	</div>
 	<!-- Call to action -->
 
+
+	<!-- SLIDER -->
+	<section id="alliances"></section>
+		<ul class="nav nav-pills nav-justified">
+			<li ng-click="g.alliances = !g.alliances"><a href="">Alliances</a></li>
+			<li><a href="">Resume</a></li>
+		</ul>
+
+	<div class="container">
+		<slider class="slider-animation" images="g.slider.images" ng-show="g.alliances"></slider>
+	</div>
+
+
+
+
 	<div class="container">
 		<div class="row mt">
 			<div class="col-lg-12">

@@ -139,3 +139,24 @@ to prevent collapsing during animation*/
 .contact-animation.ng-hide-add {
   display: block !important;
 }
+
+
+////////// SLIDER
+.slider-animation {
+
+}
+
+.slider-animation.ng-hide-remove {
+  animation: fadeInDown;
+  animation-duration: 0.4s;
+}
+
+.slider-animation.ng-hide-add {
+  animation: fadeOutUp;
+  animation-duration: 0.4s;
+}
+
+.slider-animation.ng-hide-remove,
+.slider-animation.ng-hide-add {
+  display: block !important;
+}
