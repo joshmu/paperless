@@ -84,24 +84,6 @@ angular.module('paperlessApp')
 		/*#############################################################
 		GOOGLE MAPS
 		#############################################################*/
-		g.map = {
-			center: {
-				latitude: -33,
-				longitude: 150
-			},
-			zoom: 5
-		};
-
-		g.map.markerIcon = '../images/icons/letter_p.png';
-		g.map.markers = [];
-
-		//change contact info
-		g.contact = function(location){
-			console.log('hello ' + location);
-		};
-
-		//default contact
-		g.currentContact = 'melb';
 
 		//brisbane
 		var brisMarker = {
@@ -111,17 +93,16 @@ angular.module('paperlessApp')
 			},
 			name : 'bris'
 		};
-		g.map.markers.push(brisMarker);
 
 		//melbourne
 		var melbMarker = {
+			//this coords are correct to the po box
 			coords: {
-				latitude: -37.8602828,
-				longitude: 145.079616
+				latitude: -37.813165,
+				longitude: 144.955814
 			},
 			name : 'melb'
 		};
-		g.map.markers.push(melbMarker);
 
 		//sydney
 		var sydMarker = {
@@ -131,6 +112,19 @@ angular.module('paperlessApp')
 			},
 			name : 'syd'
 		};
-		g.map.markers.push(sydMarker);
+
+		g.map = {
+			center: {
+				latitude: -33,
+				longitude: 150
+			},
+			zoom: 5,
+			markerIcon : '../images/icons/letter_p.png',
+			markers : [melbMarker, brisMarker, sydMarker]
+
+		};
+
+		//default contact
+		g.currentContact = 'melb';
 
 	});
