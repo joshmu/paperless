@@ -1,26 +1,26 @@
 <div class="container">
-	<!-- WELCOME SECTION -->
-	<div id="welcome" class="container">
-		<div class="row mt centered">
-			<div class="col-lg-8 col-lg-offset-2">
-				<h1><b>Spot Free Theme</b></h1>
+	<!--&lt;!&ndash; WELCOME SECTION &ndash;&gt;-->
+	<!--<div id="welcome" class="container">-->
+		<!--<div class="row mt centered">-->
+			<!--<div class="col-lg-8 col-lg-offset-2">-->
+				<!--<h1><b>Spot Free Theme</b></h1>-->
 
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-				   industry's standard dummy text ever since the 1500s.</p>
-			</div>
-		</div>
-		<!-- /row -->
-	</div>
-	<!-- /.container -->
+				<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+				   <!--industry's standard dummy text ever since the 1500s.</p>-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--&lt;!&ndash; /row &ndash;&gt;-->
+	<!--</div>-->
+	<!--&lt;!&ndash; /.container &ndash;&gt;-->
 
-	<!-- MAC IMAGE -->
-	<div class="container">
-		<div class="row centered">
-			<div class="col-lg-10 col-lg-offset-1">
-				<img class="img-responsive" src="images/blacktie-imgs/spot.png" alt="Spot Theme">
-			</div>
-		</div>
-	</div>
+	<!--&lt;!&ndash; MAC IMAGE &ndash;&gt;-->
+	<!--<div class="container">-->
+		<!--<div class="row centered">-->
+			<!--<div class="col-lg-10 col-lg-offset-1">-->
+				<!--<img class="img-responsive" src="images/blacktie-imgs/spot.png" alt="Spot Theme">-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
 
 	<!-- BRANDS -->
 	<section id="brands"></section>
@@ -205,7 +205,7 @@
 						        <!--src="https://www.google.es/maps?t=m&amp;ie=UTF8&amp;ll=-37.809637,144.963903&amp;spn=67.34552,156.972656&amp;z=6&amp;output=embed"></iframe>-->
 					<!--</div>-->
 					<google-map center="g.map.center" zoom="g.map.zoom">
-						<marker ng-repeat='marker in g.map.markers' coords='marker.coords'
+						<marker ng-repeat='marker in g.map.markers' coords='marker.coords' click='g.contact(marker.name)'
 						        icon='g.map.markerIcon'>
 						</marker>
 					</google-map>

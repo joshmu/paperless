@@ -95,12 +95,18 @@ angular.module('paperlessApp')
 		g.map.markerIcon = '../images/icons/letter_p.png';
 		g.map.markers = [];
 
+		//change contact info
+		g.contact = function(location){
+			console.log('hello ' + location);
+		};
+
 		//brisbane
 		var brisMarker = {
 			coords: {
 				latitude: -27.4073899,
 				longitude: 153.0028595
-			}
+			},
+			name : 'bris'
 		};
 		g.map.markers.push(brisMarker);
 
@@ -109,7 +115,8 @@ angular.module('paperlessApp')
 			coords: {
 				latitude: -37.8602828,
 				longitude: 145.079616
-			}
+			},
+			name : 'melb'
 		};
 		g.map.markers.push(melbMarker);
 
@@ -118,7 +125,8 @@ angular.module('paperlessApp')
 			coords: {
 				latitude: -33.7969235,
 				longitude: 150.9224326
-			}
+			},
+			name : 'syd'
 		};
 		g.map.markers.push(sydMarker);
 
