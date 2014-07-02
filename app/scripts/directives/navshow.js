@@ -1,13 +1,69 @@
-//'use strict';
-//
-///**
-// * @ngdoc directive
-// * @name paperlessApp.directive:navShow
-// * @description
-// * # navShow
-// */
-//
-//// TODO: modularize so i can use it for any elem
+'use strict';
+
+/**
+* @ngdoc directive
+* @name paperlessApp.directive:navShow
+* @description
+* # navShow
+*/
+
+
+angular.module('paperlessApp')
+	.directive('navShow', function($window){
+		return {
+			restrict : 'A',
+			scope : {
+				navShow : '='	
+			},
+			link : function(scope, elem, attrs) {
+				//fade in the nav when the banner is not visible
+				var config = {
+					//calc banner height > which is always window.innerHeight
+					diff : attrs.navShowDiff || $window.innerHeight,
+					//optional offset > to cater for nav height
+					offset : attrs.navShowOffset || 0
+				};
+
+				//presume banner always shows first on load
+				scope.navShow = false;
+
+				$(window).scroll(function(){
+					//when user scrolls check if not over banner
+//					console.log('target would be', config.diff);
+//					console.log($window.scrollY);
+
+					if($window.scrollY < config.diff) {
+						if(scope.navShow) {
+							console.log('hide nav');
+							scope.navShow = false;
+						}
+					} else {
+						if(!scope.navShow) {
+							console.log('show nav');
+							scope.navShow = true;
+						}
+					}
+				});
+
+				//animate nav in & out
+
+				//this should trigger on screen resize
+			}
+		};
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+// TODO: modularize so i can use it for any elem
 //angular.module('paperlessApp')
 //	.directive('navShow', function($timeout) {
 //		return {

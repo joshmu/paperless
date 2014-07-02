@@ -9,35 +9,35 @@
  */
 angular.module('paperlessApp')
 	.controller('GlobalCtrl', function($scope) {
-		var self = this;
+		var g = this;
 
 
 		/*#############################################################
 		BRANDS TABS
 		#############################################################*/
-		this.brands = {
+		g.brands = {
 			digitalposters: true,
 			eventranet : false,
 			speakerprep : false
 
 		};
 
-		this.updateBrand = function(brand){
+		g.updateBrand = function(brand){
 			console.log('updating brand content');
-			if(self.brands[brand]) {
+			if(g.brands[brand]) {
 				console.log('brand content is already in view');
 				return;
 			}
 			//set prev tab to false
-			angular.forEach(self.brands, function(val, key){
-				if(self.brands[key]) {
+			angular.forEach(g.brands, function(val, key){
+				if(g.brands[key]) {
 					console.log('removing ' + key);
-					self.brands[key] = false;
+					g.brands[key] = false;
 				}
 			});
 			//set new tab
 			console.log('setting ' + brand);
-			self.brands[brand] = true;
+			g.brands[brand] = true;
 		};
 
 
@@ -47,16 +47,16 @@ angular.module('paperlessApp')
 		#############################################################*/
 
 		//auto-presume banner is going to be visible on load
-		this.bannerView = true;
-		this.initialState = true;
+		g.bannerView = true;
+		g.initialState = true;
 
 		//watcher to check state and remove once state changes
 		var bannerListener = $scope.$watch(function(){
-			return self.bannerView;
+			return g.bannerView;
 		}, function(n) {
 			if(n === false) {
 				console.log('banner not visible!');
-				self.initialState = false;
+				g.initialState = false;
 				//remove watcher
 				removeInitialStateWatchers();
 			}
@@ -65,12 +65,12 @@ angular.module('paperlessApp')
 
 		//help bring in nav if page is reloaded and viewer is somewhere else on page
 		var midSectionListener = $scope.$watch(function(){
-			return self.midSectionView;
+			return g.midSectionView;
 		}, function(n){
 			if(n) {
 				console.log('mid section content detected');
-				self.initialState = false;
-				self.bannerView = false;
+				g.initialState = false;
+				g.bannerView = false;
 				//remove initial state watchers
 				removeInitialStateWatchers();
 			}
@@ -84,7 +84,7 @@ angular.module('paperlessApp')
 		/*#############################################################
 		GOOGLE MAPS
 		#############################################################*/
-		this.map = {
+		g.map = {
 			center: {
 				latitude: -33,
 				longitude: 150
@@ -92,8 +92,8 @@ angular.module('paperlessApp')
 			zoom: 5
 		};
 
-		this.map.markerIcon = '../images/icons/letter_p.png';
-		this.map.markers = [];
+		g.map.markerIcon = '../images/icons/letter_p.png';
+		g.map.markers = [];
 
 		//brisbane
 		var brisMarker = {
@@ -102,7 +102,7 @@ angular.module('paperlessApp')
 				longitude: 153.0028595
 			}
 		};
-		this.map.markers.push(brisMarker);
+		g.map.markers.push(brisMarker);
 
 		//melbourne
 		var melbMarker = {
@@ -111,7 +111,7 @@ angular.module('paperlessApp')
 				longitude: 145.079616
 			}
 		};
-		this.map.markers.push(melbMarker);
+		g.map.markers.push(melbMarker);
 
 		//sydney
 		var sydMarker = {
@@ -120,6 +120,6 @@ angular.module('paperlessApp')
 				longitude: 150.9224326
 			}
 		};
-		this.map.markers.push(sydMarker);
+		g.map.markers.push(sydMarker);
 
 	});
