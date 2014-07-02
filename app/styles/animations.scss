@@ -25,41 +25,44 @@
   display: none;
 }
 
-.animate-show-down {
-  animation: fadeInDown;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards;
+.nav-animation {
 }
 
-.animate-show-down.ng-hide-add,
-.animate-show-down.ng-hide-remove {
+.nav-animation.ng-hide-remove{
+  animation: fadeInDown;
+  animation-duration: 0.6s;
+}
+
+.nav-animation.ng-hide-add {
+  animation: fadeOutUp;
+  animation-duration: 0.3s;
+}
+
+.nav-animation.ng-hide-add,
+.nav-animation.ng-hide-remove {
   display: block !important;
 }
 
-.animate-show-down.ng-hide {
-  animation: fadeOutUp;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-  display: block;
-}
 
 
 /////////// BACK TOP BUTTON
-.animate-show-up {
+.back-top-animation {
+
+}
+
+.back-top-animation.ng-hide-remove {
   animation: fadeInUp;
   animation-duration: 0.6s;
-  animation-fill-mode: forwards;
 }
 
-.animate-show-up.ng-hide-add,
-.animate-show-up.ng-hide-remove {
-  display: block !important;
-}
-
-.animate-show-up.ng-hide {
+.back-top-animation.ng-hide {
   animation: fadeOutDown;
   animation-duration: 0.3s;
-  animation-fill-mode: forwards;
+}
+
+.back-top-animation.ng-hide-add,
+.back-top-animation.ng-hide-remove {
+  display: block !important;
 }
 
 
