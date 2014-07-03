@@ -21,19 +21,20 @@
   100% { opacity:1; }
 }
 
+//TODO: this isn't a good idea... multiple animation fail...
 .animate-page-scroll-A {
   @include introFade(1.5s, 1s);
 }
-
-.animate-page-scroll-B {
-//  @include introFade(1.5s, 1s);
-  opacity: 0;
-  animation: glow;
-  animation-duration: 2s;
-  animation-delay: 3s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-}
+//
+//.animate-page-scroll-B {
+////  @include introFade(1.5s, 1s);
+//  opacity: 0;
+//  animation: glow;
+//  animation-duration: 2s;
+//  animation-delay: 3s;
+//  animation-iteration-count: infinite;
+//  animation-fill-mode: forwards;
+//}
 
 
 ////////// NAVIGATION BAR
