@@ -12,7 +12,7 @@ angular.module('paperlessApp')
 			templateUrl: 'views/contact.html',
 			restrict   : 'E',
 			replace    : true,
-			link       : function postLink(scope, element, attrs) {
+			link       : function postLink() {
 			}
 		};
 	});

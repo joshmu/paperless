@@ -20,6 +20,7 @@ angular.module('paperlessApp')
             speakerprep: false
 
         };
+        g.brandsArr = ['digitalposters', 'eventranet', 'speakerprep'];
 
 
 
@@ -126,27 +127,33 @@ angular.module('paperlessApp')
         g.currentContact = 'melb';
 
         /*#############################################################
-		 SLIDER
+		 ALLIANCES
 		 #############################################################*/
         g.slider = {};
         g.slider.images = [{
             src: '../images/alliances/CSServices.jpg',
-            title: 'CSServices'
+            title: 'CSServices',
+            url : 'http://www.csservices.com.au/'
         }, {
             src: '../images/alliances/Saffron.png',
-            title: 'Saffron'
+            title: 'Saffron',
+            url : 'http://saffronstudio.com.au/'
         }, {
             src: '../images/alliances/RombusDigital.jpg',
-            title: 'Rhombus Digital'
+            title: 'Rhombus Digital',
+            url : 'http://rhombus.com.au/'
         }, {
             src: '../images/alliances/IrisAV.png',
-            title: 'Iris AV'
+            title: 'Iris AV',
+            url : 'http://www.irisav.com.au/'
         }, {
             src: '../images/alliances/Naomi.png',
-            title: 'Naomi Jane Audio'
+            title: 'Naomi Jane Audio',
+            url : 'http://naomijaneaudio.com/Home.html'
         }, {
             src: '../images/alliances/Carlton_Terrace.png',
-            title: 'Carlton Terrace'
+            title: 'Carlton Terrace',
+            url : 'http://www.carltonterrace.com.au/'
         }];
 
     });

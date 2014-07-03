@@ -142,22 +142,24 @@ to prevent collapsing during animation*/
 }
 
 
-////////// SLIDER
-.slider-animation {
+//////////alliances
+.alliances-animation {
 
 }
 
-.slider-animation.ng-hide-remove {
+.alliances-animation.ng-hide-remove {
   animation: fadeInDown;
   animation-duration: 0.4s;
 }
 
-.slider-animation.ng-hide-add {
-  animation: fadeOutUp;
+.alliances-animation.ng-hide-add {
+  animation: fadeOut;
   animation-duration: 0.4s;
 }
 
-.slider-animation.ng-hide-remove,
-.slider-animation.ng-hide-add {
+.alliances-animation.ng-hide-remove,
+.alliances-animation.ng-hide-add {
   display: block !important;
 }
+
+//

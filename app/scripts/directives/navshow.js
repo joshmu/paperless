@@ -6,14 +6,14 @@
 * @description
 * # navShow
 */
-
+/* global $ */
 
 angular.module('paperlessApp')
 	.directive('navShow', function($window){
 		return {
 			restrict : 'A',
 			scope : {
-				navShow : '='	
+				navShow : '='
 			},
 			link : function(scope, elem, attrs) {
 				//fade in the nav when the banner is not visible

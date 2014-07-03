@@ -41,7 +41,7 @@ $fa-font-path: "../fonts";
 @import "contact";
 
 ///////// ALLIANCES
-@import "slider";
+@import "alliances";
 
 ///////// SOCIAL
 @import "social";
@@ -75,7 +75,7 @@ $fa-font-path: "../fonts";
   background-color: none;
 
   ul {
-    background-color: rgba(47, 47, 47, 0.9);
+
   }
 
   //weird 2px margin...
@@ -86,6 +86,11 @@ $fa-font-path: "../fonts";
   li {
     cursor: pointer;
     margin: 0;
+    background-color: rgba(65, 65, 65, 1);
+
+    &:nth-child(even) {
+      background-color: rgba(55, 55, 55, 1);
+    }
 
     a {
       border-radius: 0px;

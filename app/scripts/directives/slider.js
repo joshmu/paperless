@@ -14,7 +14,7 @@ angular.module('paperlessApp')
 	  scope: {
 		  images : '='
 	  },
-      link: function postLink(scope, element, attrs) {
+      link: function postLink() {
       }
     };
   });

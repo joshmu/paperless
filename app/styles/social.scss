@@ -1,11 +1,14 @@
 /////////// SOCIAL
-
-//TODO: scale the icons when hovered! =)
 .social-icon {
+    i {
+        transition: 0.4s transform ease-in;
+    }
 
-//  transition: 0.4s all linear;
-
-  &:hover {
-//    border-radius: 100%;
-  }
+    &:hover {
+        // border-radius: 100%;
+        i {
+            transform: scale(1.4, 1.4);
+        }
+    }
 }
+
