@@ -133,27 +133,58 @@ angular.module('paperlessApp')
         g.slider.images = [{
             src: '../images/alliances/CSServices.jpg',
             title: 'CSServices',
-            url : 'http://www.csservices.com.au/'
+            url: 'http://www.csservices.com.au/'
         }, {
             src: '../images/alliances/Saffron.png',
             title: 'Saffron',
-            url : 'http://saffronstudio.com.au/'
+            url: 'http://saffronstudio.com.au/'
         }, {
             src: '../images/alliances/RombusDigital.jpg',
             title: 'Rhombus Digital',
-            url : 'http://rhombus.com.au/'
+            url: 'http://rhombus.com.au/'
         }, {
             src: '../images/alliances/IrisAV.png',
             title: 'Iris AV',
-            url : 'http://www.irisav.com.au/'
+            url: 'http://www.irisav.com.au/'
         }, {
             src: '../images/alliances/Naomi.png',
             title: 'Naomi Jane Audio',
-            url : 'http://naomijaneaudio.com/Home.html'
+            url: 'http://naomijaneaudio.com/Home.html'
         }, {
             src: '../images/alliances/Carlton_Terrace.png',
             title: 'Carlton Terrace',
-            url : 'http://www.carltonterrace.com.au/'
+            url: 'http://www.carltonterrace.com.au/'
         }];
 
+
+
+        /*#############################################################
+		 ALLIANCES & RESUME TOGGLE
+		 #############################################################*/
+        g.navToggleItems = {
+            resume: {
+                name: 'resume',
+                visible: false
+            },
+            alliances: {
+                name: 'alliances',
+                visible: false
+            }
+        };
+
+        g.navToggle = function(toBeVisible) {
+            var prev;
+            //set all items to invisible
+            angular.forEach(g.navToggleItems, function(item) {
+            	//store if item is visible
+                if (item.visible) {
+                    prev = item.name;
+                }
+                item.visible = false;
+            });
+            //show selected if previously invisible
+            if (prev !== toBeVisible) {
+                g.navToggleItems[toBeVisible].visible = true;
+            }
+        };
     });

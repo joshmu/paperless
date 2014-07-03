@@ -143,20 +143,21 @@
         </li>
     </ul>
  -->
-	<br>
+    <br>
     <div class="brands">
         <ul class="nav navbar-inverse nav-pills nav-justified">
-            <li ng-click="g.alliances = !g.alliances">
-                <a href="">Alliances</a>
-            </li>
-            <li>
+            <li ng-click="g.navToggle('resume')">
                 <a href="#">Resume</a>
+            </li>
+            <li ng-click="g.navToggle('alliances')">
+                <a href="">Alliances</a>
             </li>
         </ul>
     </div>
-	<br>
-    <div class="container">
-        <slider class="alliances-animation" images="g.slider.images" ng-show="g.alliances"></slider>
+    <br>
+    <div class="container navToggle-container">
+        <resume class="alliances-animation navToggle-item" ng-show='g.navToggleItems.resume.visible'></resume>
+    	<slider class="alliances-animation navToggle-item" images="g.slider.images" ng-show="g.navToggleItems.alliances.visible"></slider>
     </div>
 
 
