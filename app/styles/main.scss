@@ -1,143 +1,92 @@
-//TODO: these fonts are not necessary
-$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+/* TODO: these fonts are not necessary */
+ $icon-font-path:"../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
-// bower:scss
-@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
-// endbower
+/* bower:scss */
+ @import"bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 
-////////// FONT-AWESOME
-// create font directory in app and copy over fonts then:
-$fa-font-path: "../fonts";
-@import "font-awesome/scss/font-awesome";
+/* endbower */
 
-//TEMPLATE
-@import "blacktie";
+/* font awesome */
 
-// CUSTOM
+/*  create font directory in app and copy over fonts then: */
+ $fa-font-path:"../fonts";
+ @import"font-awesome/scss/font-awesome";
 
-////////// VARS
-@import "vars";
+/* template */
+ @import"blacktie";
 
-/////////// MEDIA QUERY
+/*==============================
+=            custom            =
+==============================*/
+
+/* vars */
+ @import"vars";
+
+/* media query */
+
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-sm-min) {
+ @media (min-width: $screen-sm-min) {
 }
-
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: $screen-md-min) {
+ @media (min-width: $screen-md-min) {
 }
-
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: $screen-lg-min) {
+ @media (min-width: $screen-lg-min) {
 }
+/* banner */
+ @import"banner";
 
-////////// BANNER
-@import "banner";
+/* navbar */
+ @import"navbar";
 
-////////// NAVBAR
-@import "navbar";
+/* contact */
+ @import"contact";
 
-////////// CONTACT
-@import "contact";
+/* alliances */
+ @import"alliances";
 
-///////// ALLIANCES
-@import "alliances";
+/* social */
+ @import"social";
 
-///////// SOCIAL
-@import "social";
+/* news */
+ @import"news";
 
-////////// NEWS
-#news {
-  background: #000 url(../images/oldContent/convention.jpg) no-repeat scroll bottom center;
-  background-attachment: fixed;
-  //TODO: make background attachment width 1440px and center, then there will be no props with parallax!
-  //TODO: animation on intro load after banner, hover over each brand and then select the first!
-  background-size: cover;
-  height: 300px;
-  text-align: center;
-  padding: 35px 0;
-  color: #fff;
+/* brands */
+ @import"brands";
 
-  .overlay {
-    background-color: rgba(102, 203, 183, 1);
-    opacity: 0.4;
-
-    //match
-    height: 300px;
+/* nav toggle (resume & alliances) */
+ .navToggle-container {
     position: relative;
-    bottom: 35px;
-  }
 }
-
-//////////// BRANDS
-.brands {
-
-  background-color: none;
-
-  ul {
-
-  }
-
-  //weird 2px margin...
-  .nav-pills > li + li {
-    margin: 0;
-  }
-
-  li {
-    cursor: pointer;
-    margin: 0;
-    background-color: rgba(65, 65, 65, 1);
-
-    &:nth-child(even) {
-      background-color: rgba(55, 55, 55, 1);
-    }
-
-    a {
-      border-radius: 0px;
-      color: white;
-      font-size: 1.4em;
-      margin: 0;
-
-      transition: 0.2s ease-in background-color;
-
-      .active {
-        color: $font-sp;
-        background-color: red;
-      }
-
-      &:hover {
-        background-color: $hover-sp;
-      }
-    }
-  }
-
-}
-
-
-/////////// NAV TOGGLE (resume & alliances)
-.navToggle-container {
-  position: relative;
-}
-
 .navToggle-item {
-  position: relative;
-  top: 0;
+    position: relative;
+    top: 0;
+}
+/* contact toggle mobile */
+ .contact-toggle-mobile {
+    a {
+        font-size: 14px !important;
+    }
 }
 
-
-////////// ANCHORS
-a {
-
-  &:hover, &:focus {
-    text-decoration: none;
-    outline: 0;
-  }
+/* gmap */
+.gmap-col {
+  padding: 0;
 }
 
-////////// MU
-#mu {
-  cursor: pointer;
+/* anchors */
+ a {
+    &:hover, &:focus {
+        text-decoration: none;
+        outline: 0;
+    }
 }
-
-////////// ANIMATIONS
-@import "animations";
+/* MU */
+ #mu {
+    a {
+        cursor: pointer;
+        color: rgba(47, 47, 47, 1);
+    }
+}
+/* animations */
+ @import"animations";

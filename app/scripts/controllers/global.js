@@ -75,9 +75,21 @@ angular.module('paperlessApp')
             }
         });
 
+        //also watch footer
+        var footerListener = $scope.$watch(function(){
+        	return g.footerView;
+        }, function(n) {
+        	if(n) {
+        		//footer visible
+        		g.initialState = false;
+        		removeInitialStateWatchers();
+        	}
+        });
+
         function removeInitialStateWatchers() {
             bannerListener();
             midSectionListener();
+            footerListener();
         }
 
         /*#############################################################
