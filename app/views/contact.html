@@ -3,9 +3,9 @@
 	<!-- mobile nav -->
 	<div class="contact-toggle-mobile brands hidden-lg hidden-md">
 		<ul class="nav nav-pills">
-			<li><a href="">Melbourne</a></li>
-			<li><a href="">Brisbane</a></li>
-			<li><a href="">Sydney</a></li>
+			<li ng-class="{ active : g.currentContact === 'melb'}" ng-click="g.currentContact = 'melb'"><a href="">Melbourne</a></li>
+			<li ng-class="{ active : g.currentContact === 'bris'}" ng-click="g.currentContact = 'bris'"><a href="">Brisbane</a></li>
+			<li ng-class="{ active : g.currentContact === 'syd'}" ng-click="g.currentContact = 'syd'"><a href="">Sydney</a></li>
 		</ul>
 	</div>
 

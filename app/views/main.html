@@ -144,12 +144,13 @@
     </ul>
  -->
     <br>
+    <!-- resume & alliances toggle -->
     <div class="brands">
         <ul class="nav navbar-inverse nav-pills nav-justified">
-            <li ng-click="g.navToggle('resume')">
+            <li ng-click="g.navToggle('resume')" ng-class="{active : g.navToggleItems.resume.visible}">
                 <a href="#">Resume</a>
             </li>
-            <li ng-click="g.navToggle('alliances')">
+            <li ng-click="g.navToggle('alliances')" ng-class="{active : g.navToggleItems.alliances.visible}">
                 <a href="">Alliances</a>
             </li>
         </ul>
@@ -184,30 +185,30 @@
     <div id="sf">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 dg social-icon">
+                <div class="col-xs-4 dg social-icon">
                     <h4 class="ml">FACEBOOK</h4>
 
                     <p class="centered"><a href="http://www.facebook.com/pages/Lucien-Mark"><i
 							class="fa fa-facebook"></i></a>
                     </p>
 
-                    <p class="ml">> Become A Friend</p>
+                    <p class="ml hidden-xs hidden-sm">> Become A Friend</p>
                 </div>
-                <div class="col-lg-4 lg social-icon">
+                <div class="col-xs-4 lg social-icon">
                     <h4 class="ml">TWITTER</h4>
 
                     <p class="centered"><a href="http://twitter.com/paperlessevent"><i class="fa fa-twitter"></i></a>
                     </p>
 
-                    <p class="ml">> Follow Us</p>
+                    <p class="ml hidden-xs hidden-sm">> Follow Us</p>
                 </div>
-                <div class="col-lg-4 dg social-icon">
+                <div class="col-xs-4 dg social-icon">
                     <h4 class="ml">SKYPE</h4>
 
                     <p class="centered"><a href="#"><i class="fa fa-skype"></i></a>
                     </p>
 
-                    <p class="ml">> ritchie.andrew</p>
+                    <p class="ml hidden-xs hidden-sm">> ritchie.andrew</p>
                 </div>
                 <!--<div class="col-lg-4 dg">-->
                 <!--<h4 class="ml">GOOGLE +</h4>-->
