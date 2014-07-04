@@ -181,6 +181,10 @@ angular.module('paperlessApp')
             alliances: {
                 name: 'alliances',
                 visible: false
+            },
+            demonstration: {
+                name: 'demonstration',
+                visible: true
             }
         };
 

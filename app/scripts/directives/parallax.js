@@ -53,6 +53,16 @@ angular.module('paperlessApp')
 					parallax = 0;
 					offset = 0;
 				}
+				//check on window resize, this only works one way when screen size is minified
+				//parallax is not turned back on when screen size is increased
+				$($window).resize(function(){
+					if($window.width() < 992 && parallax !== 0) {
+						parallax = 0;
+						offset = 0;
+						console.log('turning parallax off');
+						$elem.css({ backgroundPosition : '50% 0px'});
+					}
+				});
 
 				$window.scroll(function() {
 					var heightPos = $window.scrollTop() - $elem.offset().top;

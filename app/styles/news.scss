@@ -1,3 +1,11 @@
+/* template container around the news */
+#call {
+  h3, p {
+    width : 90%;
+    margin : 15px auto;
+  }
+}
+
 #news {
   background: #000 url(../images/oldContent/convention.jpg) no-repeat scroll bottom center;
   background-attachment: fixed;
@@ -8,14 +16,4 @@
   text-align: center;
   padding: 35px 0;
   color: #fff;
-
-  .overlay {
-    background-color: rgba(102, 203, 183, 1);
-    opacity: 0.4;
-
-    //match
-    height: 300px;
-    position: relative;
-    bottom: 35px;
-  }
 }

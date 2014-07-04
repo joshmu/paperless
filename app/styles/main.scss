@@ -61,6 +61,9 @@
 .navToggle-item {
     position: relative;
     top: 0;
+    img {
+        width: 100%;
+    }
 }
 /* contact toggle mobile */
  .contact-toggle-mobile {
@@ -68,23 +71,35 @@
         font-size: 14px !important;
     }
 }
-
 /* gmap */
-.gmap-col {
-  padding: 0;
+ .gmap-col {
+    padding: 0;
 }
-
 /* anchors */
  a {
+    transition: 0.2s color ease-in;
     &:hover, &:focus {
         text-decoration: none;
         outline: 0;
+        color: rgba(25, 201, 171, 1);
+    }
+}
+/* multitouch-user image */
+ .user-multitouch{
+    // @extend #news;
+    // background: #000 url(../images/user-multitouch.jpg) no-repeat scroll bottom center;
+    // height: 500px;
+    // background-position: 50% -400px;
+    img {
+      width: 100%;
     }
 }
 /* MU */
  #mu {
     a {
         cursor: pointer;
+        font-size: 13px;
+        letter-spacing: -1px;
         color: rgba(47, 47, 47, 1);
     }
 }
