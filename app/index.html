@@ -38,6 +38,20 @@
 
     <!-- Add your site or application content here -->
 
+    <!-- page load spinner -->
+    <!--     <div class="loading">
+		<i class="loading fa fa-spinner fa-spin fa-3x"></i>
+    </div>
+ -->
+
+
+    <!-- The splash screen must be first -->
+    <div id="splash" ng-cloak>
+        <i class="fa fa-spin fa-3x"></i>
+        <h2>Loading</h2>
+    </div>
+    <!-- The rest of our app -->
+
 
     <!-- BANNER -->
     <div id="banner" in-view="g.bannerView = $inview" in-view-offset="-71">
@@ -95,17 +109,14 @@
                                 <!-- show brands in detail on smaller screens -->
                                 <li class='hidden-xs'><a scroll-to="brands">Brands</a>
                                 </li>
-                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.updateBrand('digitalposters')"
-                                	data-toggle='collapse' data-target='.in'>
-                                	<a ui-sref='main.digitalposters' scroll-to="brands-content">DigitalPosters</a>
+                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.updateBrand('digitalposters')" data-toggle='collapse' data-target='.in'>
+                                    <a ui-sref='main.digitalposters' scroll-to="brands-content">DigitalPosters</a>
                                 </li>
-                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.updateBrand('eventranet')"
-                                data-toggle='collapse' data-target='.in'>
-                                	<a ui-sref='main.eventranet' scroll-to="brands-content">Eventranet</a>
+                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.updateBrand('eventranet')" data-toggle='collapse' data-target='.in'>
+                                    <a ui-sref='main.eventranet' scroll-to="brands-content">Eventranet</a>
                                 </li>
-                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.updateBrand('speakersprep')"
-                                data-toggle='collapse' data-target='.in'>
-                                	<a ui-sref='main.speakersprep' scroll-to="brands-content">SpeakersPrep</a>
+                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.updateBrand('speakersprep')" data-toggle='collapse' data-target='.in'>
+                                    <a ui-sref='main.speakersprep' scroll-to="brands-content">SpeakersPrep</a>
                                 </li>
                                 <!-- end of brands -->
                                 <li data-toggle='collapse' data-target='.in'><a scroll-to="call">News</a>
@@ -113,17 +124,14 @@
                                 <!-- show extra content in detail on smaller screens -->
                                 <li class='hidden-xs' data-toggle='collapse' data-target='.in'><a scroll-to="extras">Demo</a>
                                 </li>
-                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.navToggle('demonstration')"
-                                data-toggle='collapse' data-target='.in'>
-                                	<a scroll-to="extras-content">Demonstration</a>
+                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.navToggle('demonstration')" data-toggle='collapse' data-target='.in'>
+                                    <a scroll-to="extras-content">Demonstration</a>
                                 </li>
-                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.navToggle('resume')"
-                                data-toggle='collapse' data-target='.in'>
-                                	<a scroll-to="extras-content">Resume</a>
+                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.navToggle('resume')" data-toggle='collapse' data-target='.in'>
+                                    <a scroll-to="extras-content">Resume</a>
                                 </li>
-                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.navToggle('alliances')"
-                                data-toggle='collapse' data-target='.in'>
-                               		<a scroll-to="extras-content">Alliances</a>
+                                <li class='hidden-lg hidden-md hidden-sm' ng-click="g.navToggle('alliances')" data-toggle='collapse' data-target='.in'>
+                                    <a scroll-to="extras-content">Alliances</a>
                                 </li>
                                 <li data-toggle='collapse' data-target='.in'><a scroll-to="contact">Contact</a>
                                 </li>

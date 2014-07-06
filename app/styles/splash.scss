@@ -1,0 +1,13 @@
+[ng-cloak].splash {
+  display: block !important;
+}
+[ng-cloak] {display: none;}
+/* some naive styles for a splash page */
+.splash {
+  background: blue;
+  color: white;
+}
+.splash h2 {
+  font-size: 2.1em;
+  font-weight: 500;
+}
