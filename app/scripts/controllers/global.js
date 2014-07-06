@@ -118,8 +118,8 @@ angular.module('paperlessApp')
         //sydney
         var sydMarker = {
             coords: {
-                latitude: -33.7969235,
-                longitude: 150.9224326
+                latitude: -33.871722,
+                longitude: 151.206708
             },
             name: 'syd'
         };

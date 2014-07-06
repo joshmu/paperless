@@ -20,6 +20,9 @@
     font-size: 2em;
 
     transition: 0.3s color ease-in;
+    span {
+      letter-spacing: -1px;
+    }
 
     a {
       color: #fff;

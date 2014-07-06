@@ -55,10 +55,13 @@
  @import"brands";
 
 /* nav toggle (resume & alliances) */
- .navToggle-container {
+ .nav-toggle {
+    @extend .brands;
+}
+.nav-toggle-container {
     position: relative;
 }
-.navToggle-item {
+.nav-toggle-item {
     position: relative;
     top: 0;
     img {
@@ -69,6 +72,13 @@
  .contact-toggle-mobile {
     a {
         font-size: 14px !important;
+    }
+}
+/* welcome */
+ .welcome {
+    padding: 40px;
+    img {
+        margin:auto;
     }
 }
 /* gmap */
@@ -85,17 +95,20 @@
     }
 }
 /* multitouch-user image */
- .user-multitouch{
+ .user-multitouch {
     // @extend #news;
     // background: #000 url(../images/user-multitouch.jpg) no-repeat scroll bottom center;
     // height: 500px;
     // background-position: 50% -400px;
     img {
-      width: 100%;
+        width: 100%;
     }
 }
 /* MU */
- #mu {
+ .footer {
+    height: 80px;
+}
+#mu {
     a {
         cursor: pointer;
         font-size: 13px;

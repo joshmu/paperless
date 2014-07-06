@@ -1,26 +1,31 @@
 <div class="container">
-    <!--&lt;!&ndash; WELCOME SECTION &ndash;&gt;-->
-    <!--<div id="welcome" class="container">-->
-    <!--<div class="row mt centered">-->
-    <!--<div class="col-lg-8 col-lg-offset-2">-->
-    <!--<h1><b>Spot Free Theme</b></h1>-->
+   <!-- welcome section -->
+    <!--     <div id="welcome" class='welcome'>
+        <div class="row mt centered">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Paperless Events</h1>
+                <blockquote>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </blockquote>
+            </div>
+        </div>
+    </div>
 
-    <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
-    <!--industry's standard dummy text ever since the 1500s.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /row &ndash;&gt;-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /.container &ndash;&gt;-->
+    <div class="row centered welcome">
+        <div class="col-xs-12">
+            <img class='img-responsive' src="../images/seedling-cropped.png" alt="welcome image">
+        </div>
+    </div> -->
+    <section id="welcome"></section>
+    <br>
+    <div class="welcome">
+        <div class="row centered">
+            <div class="col-sm-8 col-sm-offset-2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic, animi voluptates porro facilis, cum deleniti sed consectetur, mollitia suscipit quo nisi minus recusandae repellat ut nemo neque laborum fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores necessitatibus laborum adipisci, numquam repellendus facere unde inventore officiis! Quisquam doloremque qui animi pariatur eligendi tenetur cum accusamus, libero tempore velit?</p>
+            </div>
+        </div>
+    </div>
 
-    <!--&lt;!&ndash; MAC IMAGE &ndash;&gt;-->
-    <!--<div class="container">-->
-    <!--<div class="row centered">-->
-    <!--<div class="col-lg-10 col-lg-offset-1">-->
-    <!--<img class="img-responsive" src="images/blacktie-imgs/spot.png" alt="Spot Theme">-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
 
     <!-- BRANDS -->
     <section id="brands"></section>
@@ -34,29 +39,11 @@
             </li>
         </ul>
         <!-- STATES -->
+        <section id="brands-content"></section>
         <div class="ui-view-container">
             <div class="animate-ui-view" ui-view></div>
         </div>
     </div>
-
-
-    <!--&lt;!&ndash; SINGLE PROJECT STANDOUT IMAGE &ndash;&gt;-->
-    <!--<div id="sp-standout"></div>-->
-
-    <!--<div class="container">-->
-    <!--<div class="row mt centered">-->
-    <!--<div class="col-lg-8 col-lg-offset-2">-->
-    <!--<h1>More Information</h1>-->
-    <!--<ul class="process effect-2" id="process">-->
-    <!--<li><img src="images/blacktie-imgs/sp/p01.png"></li>-->
-    <!--<li><img src="images/blacktie-imgs/sp/p02.png"></li>-->
-    <!--<li><img src="images/blacktie-imgs/sp/p04.png"></li>-->
-    <!--<li><img src="images/blacktie-imgs/sp/p03.png"></li>-->
-    <!--</ul>-->
-    <!--</div>&lt;!&ndash; col-lg-8 &ndash;&gt;-->
-    <!--</div>&lt;!&ndash; row &ndash;&gt;-->
-    <!--</div>&lt;!&ndash; container &ndash;&gt;-->
-
 
     <!-- CALL TO ACTION -->
     <div id="call" in-view="g.midSectionView = $inview">
@@ -116,7 +103,8 @@
     <!-- SLIDER -->
     <br>
     <!-- resume & alliances toggle -->
-    <div class="brands">
+    <section id="extras"></section>
+    <div class="nav-toggle">
         <ul class="nav navbar-inverse nav-pills nav-justified">
             <li ng-click="g.navToggle('resume')" ng-class="{active : g.navToggleItems.resume.visible}">
                 <a href="#">Resume</a>
@@ -130,17 +118,22 @@
         </ul>
     </div>
     <br>
-    <div class="container navToggle-container">
-        <resume class="alliances-animation navToggle-item" ng-show='g.navToggleItems.resume.visible'></resume>
-        <demonstration class="alliances-animation navToggle-item" ng-show='g.navToggleItems.demonstration.visible'></demonstration>
-    	<slider class="alliances-animation navToggle-item" images="g.slider.images" ng-show="g.navToggleItems.alliances.visible"></slider>
+    <section id="extras-content"></section>
+    <div class="nav-toggle-container">
+        <resume class="alliances-animation nav-toggle-item" ng-show='g.navToggleItems.resume.visible'></resume>
+        <demonstration class="alliances-animation nav-toggle-item" ng-show='g.navToggleItems.demonstration.visible'></demonstration>
+        <alliances class="alliances-animation nav-toggle-item" images="g.slider.images" ng-show="g.navToggleItems.alliances.visible"></alliances>
     </div>
 
-<!-- user image overlay -->
-	<div class="user-multitouch">
-		<img src="../images/user-multitouch-cropped.jpg" alt="user pressing multitouch screen">
-	</div>
+    <!-- user image overlay -->
+</div>
 
+<br>
+
+<div class="user-multitouch">
+    <img src="../images/user-multitouch-cropped.jpg" alt="user pressing multitouch screen">
+</div>
+<div class="container">
 
     <div class="container">
         <div class="row mt">
@@ -167,7 +160,7 @@
                     <h4 class="ml">FACEBOOK</h4>
 
                     <p class="centered"><a href="http://www.facebook.com/pages/Lucien-Mark"><i
-							class="fa fa-facebook"></i></a>
+                            class="fa fa-facebook"></i></a>
                     </p>
 
                     <p class="ml hidden-xs hidden-sm">> Become A Friend</p>
